@@ -4,3 +4,5 @@
 插件存放路径如图：
 
 ![cut_20230729191839](https://github.com/crowya/argon-comment-IP-address/assets/61354956/78cedb1f-5c97-4d17-bed2-2baab733bbee)
+
+安装完成后别忘了去后台启用插件哦~
