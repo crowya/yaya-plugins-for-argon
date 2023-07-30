@@ -22,3 +22,11 @@
 一般没有设置，启用即生效。
 
 但有些参数的确是可以修改的，直接去插件目录改源文件就行了。
+
+## 灵感来源
+感谢以下所有代码和思路的分享者。
+- [阿锋](https://feng.pub/0420222178.html)
+- [RSS llama](https://cn.wordpress.org/plugins/rss-llama/)
+- [obaby](https://h4ck.org.cn/2023/07/wordpress-%e8%af%84%e8%ae%ba%e6%98%be%e7%a4%baip%e5%bd%92%e5%b1%9e%e5%9c%b0%e6%8f%92%e4%bb%b6-wp-useragent%e5%a2%9e%e5%bc%ba%e7%89%88-12-01-01/)
+- [Enjoy的博客](https://mcenjoy.cn/1241/)
+- [润色以后](https://www.xyqiang.top/other/wordpress%E4%BD%BF%E7%94%A8%E5%B0%8F%E4%BC%98%E5%8C%96%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/)
