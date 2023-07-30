@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: 鸦鸦的插件之友链RSS聚合
-Description: 友链RSS聚合 正文中输入短代码[yaya-links-rss]即可
+Description: 友链RSS聚合 正文中输入短代码[yaya-links-rss]即可 使用WP自带的链接管理器（Links Manager）管理RSS地址
 Author: crowya
 Author URI: https://github.com/crowya
 Version: 1.0
