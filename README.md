@@ -8,7 +8,7 @@
 ![cut_20230730234133](https://github.com/crowya/yaya-plugins-for-argon/assets/61354956/e1018930-8275-4be0-963e-22509b0e1bab)
 
 ## 友链RSS聚合（yaya-links-rss）
-正文中输入短代码`[yaya-links-rss]`即可。使用WP自带的链接管理器（Links Manager）管理RSS地址
+正文中输入短代码`[yaya-links-rss]`即可。使用WP自带的链接管理器（Links Manager）管理RSS地址。
 ![cut_20230730234311](https://github.com/crowya/yaya-plugins-for-argon/assets/61354956/c52c9d8d-703d-4efe-8c08-fc0d5dc0038e)
 
 # 如何安装
