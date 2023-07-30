@@ -3,11 +3,11 @@
 - 每个文件夹是一个插件。
 # 插件功能预览
 可前往[鸦鸦的巢穴](https://crowya.com/)查看效果。
-## IP显示
+## IP显示（yaya-comment-ip）
 评论区显示IP归属地。
 ![cut_20230730234133](https://github.com/crowya/yaya-plugins-for-argon/assets/61354956/e1018930-8275-4be0-963e-22509b0e1bab)
 
-## 友链RSS聚合
+## 友链RSS聚合（yaya-links-rss）
 正文中输入短代码[yaya-links-rss]即可。
 ![cut_20230730234311](https://github.com/crowya/yaya-plugins-for-argon/assets/61354956/c52c9d8d-703d-4efe-8c08-fc0d5dc0038e)
 
