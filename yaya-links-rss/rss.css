@@ -34,3 +34,24 @@
 .links-rss p{
     margin-bottom:0;
 }
+
+@keyframes spin { 100% { transform: rotate(360deg); } }
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+#yaya-loading-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    background-color: #4fd69c33;
+    border-radius: 8px;
+    margin-bottom: 1em;
+    animation: blink 1.5s infinite;
+}
+
+#yaya-loading-box i {
+    font-size: 1.5em;
+    margin-right: 0.6em;
+    animation: spin 1.2s linear infinite;
+    color: #4fd69c;
+}
