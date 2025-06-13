@@ -23,6 +23,15 @@ if (!file_exists(YAYA_CACHE_PATH)) {
     mkdir(YAYA_CACHE_PATH, 0755, true);
 }
 
+// === 注册计划周期 ===
+add_filter('cron_schedules', function($schedules) {
+    $schedules['every_4_hours'] = [
+        'interval' => 14400,
+        'display'  => 'Every 4 Hours'
+    ];
+    return $schedules;
+});
+
 // === RSS抓取逻辑类 ===
 class BFCLinks {
     protected $parsed_args;
@@ -106,35 +115,12 @@ function yaya_generate_rss_cache() {
     unlink(YAYA_CACHE_LOCK); // 解锁
 }
 
-// === 注册计划任务频率 ===
-function yaya_register_schedules() {
-    add_filter('cron_schedules', function($schedules) {
-        $schedules['every_4_hours'] = [
-            'interval' => 14400,
-            'display'  => 'Every 4 Hours'
-        ];
-        return $schedules;
-    });
-}
-
 // === 安排定时任务 ===
 function yaya_setup_cron() {
-    if (!wp_next_scheduled('yaya_refresh_rss_cache')) {
-        $now = current_time('timestamp');
-        $next = strtotime('08:00', $now);
-        if ($now > $next) {
-            $hours = [12, 16, 20];
-            foreach ($hours as $h) {
-                $nextTry = strtotime(sprintf('%02d:00', $h), $now);
-                if ($now < $nextTry) {
-                    $next = $nextTry;
-                    break;
-                }
-            }
-            if ($now >= strtotime('20:00', $now)) {
-                $next = strtotime('08:00', strtotime('+1 day', $now));
-            }
-        }
+    if (! wp_next_scheduled('yaya_refresh_rss_cache')) {
+        $now = time();
+        $interval = 4 * 3600;
+        $next = ceil(($now + 600) / $interval) * $interval; // +600秒确保不会立即触发
         wp_schedule_event($next, 'every_4_hours', 'yaya_refresh_rss_cache');
     }
 }
@@ -144,7 +130,6 @@ add_action('yaya_refresh_rss_cache', 'yaya_generate_rss_cache');
 
 // === 插件激活钩子 ===
 register_activation_hook(__FILE__, function () {
-    yaya_register_schedules();
     yaya_setup_cron();
 });
 
